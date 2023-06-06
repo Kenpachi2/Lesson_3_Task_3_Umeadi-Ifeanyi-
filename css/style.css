@@ -25,7 +25,10 @@ footer, header, hgroup, menu, nav, section {
 
 body {
 	line-height: 1;
-	width: 100%;
+	
+	/* Had to put the following body styles here because of the lint */
+	background-color: #CCC;
+	font-family: Raleway, sans-serif;
 }
 
 ol, ul {
@@ -51,3 +54,172 @@ table {
 
 
 /* Write your css below here */
+* {
+	box-sizing: border-box;
+	line-height: 1.5em;
+}
+.container{
+	height: 100vh;
+	width: 100vw;
+}
+h1,
+h2,
+h3,
+h4 {
+	text-transform: uppercase;
+}
+
+header {
+	display: flex;
+	flex-direction: column;
+	background-color: #690c9b;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	padding: 8px;
+	margin-bottom: 0;
+	font-size: 1.3em;
+}
+h1{
+	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+	font-size: larger;
+	color: #a50808;
+}
+nav {
+	background-image: linear-gradient(to bottom right, #b14a2b, #be200b);
+	margin-top: 0;
+	width: 500px;
+	border-radius: 20px;
+}
+nav ul {
+	display: flex;
+	justify-content: center;
+}
+
+nav ul li a {
+	padding: 5px;
+	margin: 5px;
+	height: 20px;
+	text-align: center;
+	color: #e4dada;
+	text-decoration: none;
+	font-size: 0.8em;
+}
+
+
+
+nav ul li a:hover,
+nav ul li a:focus, .link a:hover {
+	text-decoration: underline;
+	background-color: #2b0303;
+}
+
+main {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+}
+
+main section {
+	width: 100%;
+	color: #8A7219;
+	padding: 20px;
+	background-color: #CCC;
+}
+
+main section p {
+	color: #373737;
+	margin-bottom: 10px;
+	text-align: justify;
+}
+.link{
+	margin-top: 30px;
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+main section a.button {
+	display: inline-block;
+	background-image: linear-gradient(to bottom right, #ad2bb1, #8A7219);
+	text-decoration: none;
+	text-transform: uppercase;
+	text-align: center;
+	color: #373737;
+	border: none;
+	outline: none;
+	width: 120px;
+	font-size: 14px;
+	font-weight: bold;
+	padding: 5px 8px;
+	border-radius: 10px;
+	margin-bottom: 20px;
+}
+.link a{
+	text-decoration: none;
+	color: antiquewhite;
+}
+main section a.button:hover {
+	box-shadow: 1px 1px 3px #866d14;
+	background-color: #29052c;
+	color: black;
+}
+
+main aside {
+	width: 100%;
+	background-color: #201901;
+	background-image: linear-gradient(to bottom right, #554454, #29052c);
+	padding: 20px;
+	font-family: Lato, sans-serif;
+}
+img{
+	height: 20px;
+	width: 20px;
+}
+main aside span a:hover {
+	opacity: 1;
+}
+
+main aside span a:focus {
+	border: 1px solid #CCC;
+}
+footer{
+	bottom: 0;
+	height: 6%;
+	width: 100%;
+	margin-top: 200px;
+	padding: 30px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	background-color: #554454;
+	color: #f1fac1;
+}
+
+/**** For LARGE DEVICES ****/
+@media screen and (width >= 768px) {
+	body {
+		min-height: 100vh;
+		display: flex;
+		flex-direction: column;
+	}
+	
+	nav ul li a {
+		margin: 50px;
+		font-size: 1em;
+		padding: 2px 5px 5px;
+	}
+
+	main {
+		flex-direction: row;
+		padding: 0 30px;
+	}
+
+	main section {
+		width: 80%;
+		margin-right: 20px;
+	}
+
+	main aside {
+		width: 20%;
+		margin: 50px;
+	}
+}
